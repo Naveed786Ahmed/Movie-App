@@ -1,5 +1,5 @@
 const API_BASE_URL = "https://api.themoviedb.org/3";
-const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
 const API_KEY = import.meta.env.VITE_MOVIEAPP_API_KEY;
 
 export {
