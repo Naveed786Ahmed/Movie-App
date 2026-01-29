@@ -4,7 +4,8 @@ import {
     fetchPopularMovies,
     fetchTopRatedMovies,
     fetchUpcomingMovies,
-    fetchNowPlaying
+    fetchNowPlaying,
+    fetchGenres
 } from "../services/movie.service"
 
 export const useMovies = (type = "popular", page = 1) => {
@@ -19,7 +20,8 @@ export const useMovies = (type = "popular", page = 1) => {
             trending: fetchTrendingMovies,
             topRated: fetchTopRatedMovies,
             upcoming: fetchUpcomingMovies,
-            nowPLaying: fetchNowPlaying
+            nowPLaying: fetchNowPlaying,
+            genres: fetchGenres
         }
 
         const fetchData = async () => {
@@ -27,10 +29,14 @@ export const useMovies = (type = "popular", page = 1) => {
 
             try {
                 const apiCall = apiMap[type] || fetchPopularMovies;
-                const data = await apiCall(page);                
+                const data = await apiCall(page);
+
+                const newList = data.results || data.genres || [];
 
                 setMovies((prev) => {
-                    return page === 1 ? data.results : [...prev, ...data.results]
+                    if (type === "genres") return newList;
+
+                    return page === 1 ? newList : [...prev, ...newList];
                 })
 
             } catch (error) {
