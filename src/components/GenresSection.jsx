@@ -7,7 +7,7 @@ const GenresSection = () => {
 
     return (
         <>
-            <div className='w-full bg-gray-900 flex items-center gap-3 overflow-x-auto p-4 scrollbar-hide'>
+            <div className='w-full bg-gray-900 flex items-center gap-3 overflow-x-auto p-4 scrollbar-hide mb-4 sm:mb-8'>
 
                 {
                     movies?.map((item) => (

@@ -7,7 +7,7 @@ export const ENDPOINTS = {
     NOW_PLAYING: "/movie/now_playing",
 
     // Search & Discovery
-    SEARCH_MOVIE: "/search/movie",
+    SEARCH_MOVIE: "/search/multi",
     GENRES: "/genre/movie/list",
     DISCOVER_BY_GENRE: "/discover/movie",
 

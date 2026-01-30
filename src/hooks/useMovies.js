@@ -5,7 +5,8 @@ import {
     fetchTopRatedMovies,
     fetchUpcomingMovies,
     fetchNowPlaying,
-    fetchGenres
+    fetchGenres,
+    fetchPopularShows
 } from "../services/movie.service"
 
 export const useMovies = (type = "popular", page = 1) => {
@@ -21,7 +22,8 @@ export const useMovies = (type = "popular", page = 1) => {
             topRated: fetchTopRatedMovies,
             upcoming: fetchUpcomingMovies,
             nowPLaying: fetchNowPlaying,
-            genres: fetchGenres
+            genres: fetchGenres,
+            tvShows :fetchPopularShows
         }
 
         const fetchData = async () => {
