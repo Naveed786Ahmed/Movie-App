@@ -10,7 +10,7 @@ const Header = () => {
                 <div className='w-full sm:w-auto font-medium'>
                     <p className='flex items-center justify-center text-white text-2xl sm:text-3xl'>Movie<span className='text-amber-400'>App</span></p>
                 </div>
-                <div className='w-full flex items-center justify-center gap-2 sm:flex-1 p-2'>
+                <div className='w-full flex items-center justify-center gap-2 sm:flex-1 p-2 md:pr-14'>
                     <div className='w-full max-w-lg flex-1'>
                         <input type="text"
                             value={search}
