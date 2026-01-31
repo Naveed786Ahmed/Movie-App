@@ -4,7 +4,7 @@ import { useMovies } from '../hooks/useMovies.js'
 
 const MovieRow = ({type, title, emoji}) => {
 
-    const { movies } = useMovies(type);
+    const { movies } = useMovies(type);    
 
     return (
         <>

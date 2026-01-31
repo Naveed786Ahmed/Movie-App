@@ -6,5 +6,9 @@ export const STRING = {
     TOP_RATED: "Top Rated Movies",
     UPCOMING: "Upcoming Movies",
     NOW_PLAYING: "Now Playing",
-    TV_SHOWS: "TV SHOWS"
+    TV_SHOWS: "TV SHOWS",
+    RATING: "Rating",
+    SPOKEN_LANGUAGE: "Spoken Languages",
+    DURATION: "Duration",
+    TRAILER_BUTTON: "Watch Trailer"
 }
