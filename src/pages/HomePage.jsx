@@ -5,7 +5,6 @@ import GenresSection from '../components/GenresSection.jsx'
 import MovieRow from '../components/MovieRow.jsx'
 import { STRING } from '../constant/strings.js'
 import Footer from '../components/Footer.jsx'
-import { useMovies } from '../hooks/useMovies.js'
 
 const HomePage = () => {
     return (
