@@ -1,16 +1,30 @@
-# React + Vite
+# 🎬 MovieApp - Ultimate Movie & TV Show Discovery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MovieApp is a high-performance, responsive web application built with React.js that allows users to explore a vast library of movies and TV shows. By leveraging the TMDB API, it provides real-time search, detailed metadata, and integrated YouTube trailers for an immersive cinematic experience.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Global Search:** Find any movie or TV show instantly using a dynamic search engine.
+- **Detailed Insights:** Access comprehensive data including ratings, runtimes, genres, and spoken languages.
+- **Media Trailers:** Seamlessly play official YouTube trailers directly within the app using a custom-built video player.
+- **Cast & Crew:** View the top-billed cast for every title with high-quality imagery.
+- **Fully Responsive:** Optimized for all devices, from small-screen mobile phones to large-screen desktops.
+- **Smart State Management:** Implemented custom hooks for efficient data fetching and error handling.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:**
+- **Library:** React.js (Functional Components & Hooks)
+- **Styling:** Tailwind CSS (Modern Utility-First Styling)
+- **Icons** Lucide React
+- **Routing:** React Router DOM (v6)
+- **API** TMDB (The Movie Database)
+- **HTTP Client:** Axios
+
+**Live Link:** [https://your-vercel-link.vercel.app](https://your-vercel-link.vercel.app)
