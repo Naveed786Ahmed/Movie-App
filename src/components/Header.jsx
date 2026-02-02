@@ -7,6 +7,8 @@ const Header = () => {
     const navigate = useNavigate();
 
     const onSearch = () => {
+        if (!search.trim()) return;
+
         navigate(`/searchResult/${search}`, {state: { searchItem: search }});
     }
 
