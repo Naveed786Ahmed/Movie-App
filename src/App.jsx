@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage.jsx'
 import MovieDetailedPage from './pages/MovieDetailedPage.jsx'
-import TVDetailed from './pages/TVDetailed.jsx'
+import TVDetailed from './pages/TvDetailed.jsx'
 import GenresPage from './pages/GenresPage.jsx'
 import SearchResultsPage from './pages/SearchResultsPage.jsx'
 
