@@ -6,6 +6,10 @@ const Header = () => {
     const [search, setSearch] = useState("");
     const navigate = useNavigate();
 
+    const onSearch = () => {
+        navigate(`/searchResult/${search}`, {state: { searchItem: search }});
+    }
+
     return (
         <>
             <div className='w-full fixed top-0 left-0 z-50 bg-gray-900 flex flex-col items-center justify-center sm:flex-row sm:gap-3 sm:py-2 sm:px-12 shadow-lg shadow-gray-900/30'>
@@ -22,7 +26,7 @@ const Header = () => {
                         />
                     </div>
                     <div className='w-auto'>
-                        <button className='py-2 px-4 sm:px-6 bg-amber-500 hover:bg-amber-600 active:scale-95 rounded-xl text-white text-base font-bold cursor-pointer transition-all duration-200 ease-in-out shadow-lg shadow-amber-500/30'>
+                        <button onClick={() => onSearch()} className='py-2 px-4 sm:px-6 bg-amber-500 hover:bg-amber-600 active:scale-95 rounded-xl text-white text-base font-bold cursor-pointer transition-all duration-200 ease-in-out shadow-lg shadow-amber-500/30'>
                             {STRING.SEARCH_BUTTON}
                         </button>
                     </div>

@@ -21,4 +21,6 @@ export const ENDPOINTS = {
     TV_POPULAR: "/tv/popular",
     TV_DETAILS: (id) => `/tv/${id}`,
     TV_SEASON: (tvId, seasonNumber) => `/tv/${tvId}/season/${seasonNumber}`,
+    TV_SIMILAR: (id) => `/tv/${id}/similar`,
+    TV_CAST_CREW: (id) => `/tv/${id}/credits`
 };

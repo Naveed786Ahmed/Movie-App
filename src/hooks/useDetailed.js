@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom"
-import { fetchCastCrew, fetchMovieDetails } from "../services/movie.service.js";
+import { fetchCastCrew, fetchMovieDetails, fetchSimilarMovies } from "../services/movie.service.js";
 import { useEffect, useState } from "react";
 
-export const movieDetailed = () => {
+export const useDetailed = () => {
     const [movieData, setMovieData] = useState(null);
     const [movieCast, setMovieCast] = useState(null);
+    const [similarMovie, setSimilarMovie] = useState(null);
     const [loading, setLoading] = useState(true);
 
     const { id } = useParams();
@@ -16,8 +17,10 @@ export const movieDetailed = () => {
 
                 const response = await fetchMovieDetails(id);
                 const castResponse = await fetchCastCrew(id);
+                const similarResponse = await fetchSimilarMovies(id);
                 setMovieData(response);
                 setMovieCast(castResponse);
+                setSimilarMovie(similarResponse.results);
 
             } catch (error) {
                 console.error("Error fetching movie details:", error);
@@ -31,5 +34,5 @@ export const movieDetailed = () => {
         }
     }, [id]);
 
-    return { movieData, movieCast, loading };
+    return { movieData, movieCast, similarMovie, loading };
 }

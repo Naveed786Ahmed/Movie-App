@@ -48,3 +48,9 @@ export const fetchTvDetails = (id) => axiosInstance.get(ENDPOINTS.TV_DETAILS(id)
 
 export const fetchTvSeason = (tvId, seasonNumber) =>
     axiosInstance.get(ENDPOINTS.TV_SEASON(tvId, seasonNumber));
+
+export const fetchSimilarTVshows = (id, page = 1) =>
+    axiosInstance.get(ENDPOINTS.TV_SIMILAR(id), { params: { page } });
+
+export const fetchTVCastCrew = (id) =>
+    axiosInstance.get(ENDPOINTS.TV_CAST_CREW(id));

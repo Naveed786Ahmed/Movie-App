@@ -2,6 +2,9 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage.jsx'
 import MovieDetailedPage from './pages/MovieDetailedPage.jsx'
+import TVDetailed from './pages/TVDetailed.jsx'
+import GenresPage from './pages/GenresPage.jsx'
+import SearchResultsPage from './pages/SearchResultsPage.jsx'
 
 const App = () => {
 
@@ -10,6 +13,9 @@ const App = () => {
         <Routes>
             <Route path='/' element={<HomePage />}/>
             <Route path='/movieDetailed/:id' element={<MovieDetailedPage />}/>
+            <Route path='/tvShowsDetailed/:id' element={<TVDetailed />}/>
+            <Route path='/allGenres/:id' element={<GenresPage />}/>
+            <Route path='/searchResult/:query' element={<SearchResultsPage />}/>
         </Routes>
     </>
   )
