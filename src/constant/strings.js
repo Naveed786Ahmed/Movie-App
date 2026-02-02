@@ -10,5 +10,7 @@ export const STRING = {
     RATING: "Rating",
     SPOKEN_LANGUAGE: "Spoken Languages",
     DURATION: "Duration",
-    TRAILER_BUTTON: "Watch Trailer"
+    TRAILER_BUTTON: "Watch Trailer",
+    CLOSE_TRAILER: "Close Trailer"
+
 }

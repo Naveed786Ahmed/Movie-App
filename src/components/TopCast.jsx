@@ -8,7 +8,7 @@ const TopCast = ({ movieCast }) => {
                 <p className='text-white text-lg sm:text-xl font-bold mb-4'>Top Casts</p>
                 <div className='w-full flex gap-2 sm:gap-3 overflow-x-auto scrollbar-hide'>
                     {movieCast?.cast?.slice(0,10).map((item) => (
-                        <CastCard key={item.id} item={item} />
+                        item?.profile_path && <CastCard key={item.id} item={item} />
                     ))
                     }
                 </div>
