@@ -17,10 +17,10 @@ const GenresPage = () => {
                 <Loader />
                 :
                 <div className='w-full min-h-screen p-4 pb-8 sm:px-12 pt-26 sm:pt-26 bg-gray-950'>
-                    <h2 className='text-white text-center sm:text-start text-xl sm:text-3xl font-semibold sm:mb-4'>{genreName} Movies</h2>
+                    <h2 className='text-white text-center sm:text-start text-xl sm:text-3xl font-semibold sm:mb-4'>Genre: {genreName}</h2>
                     <div className='w-full p-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:mb-2'>
                         {genres?.map((item) => (
-                            <SimilarCard key={item.id} item={item} />
+                            item?.poster_path && <SimilarCard key={item.id} item={item} />
                         ))
                         }
                     </div>

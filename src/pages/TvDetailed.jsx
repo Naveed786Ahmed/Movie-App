@@ -9,8 +9,7 @@ import Loader from '../components/Loader'
 
 const TVDetailed = () => {
 
-    const { tvShows, similartvShows, tvShowCast, loading } = useTVDetailed();
-    console.log(similartvShows);
+    const { tvShows, similartvShows, tvShowCast, loading } = useTVDetailed();    
 
     return (
         <>
@@ -21,7 +20,7 @@ const TVDetailed = () => {
                 <div className='w-full min-h-screen bg-gray-950'>
                     <Poster movieData={tvShows} />
                     <DetailBody movieData={tvShows} movieCast={tvShowCast} />
-                    <SimilarData similarMovie={similartvShows} />
+                    {similartvShows?.results?.length !== 0 && <SimilarData similarMovie={similartvShows} />}
                     <Footer />
                 </div>
             }

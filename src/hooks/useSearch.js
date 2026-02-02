@@ -3,7 +3,7 @@ import { validateSearch } from "../utils/validateSearch.js";
 import { searchMovies } from "../services/movie.service";
 import { useLocation, useParams } from "react-router-dom";
 
-export const useSearch = (page) => {
+export const useSearch = () => {
     const [results, setResults] = useState([]);
     const [searchItem, setSearchItem] = useState("");
     const [loading, setLoading] = useState(false);
@@ -28,8 +28,8 @@ export const useSearch = (page) => {
                 setError(null);
                 setLoading(true);
 
-                const response = await searchMovies(query, page);
-                setResults((prev) => (page === 1 ? response.results : [...prev, ...response.results]));
+                const response = await searchMovies(query);
+                setResults(response.results);
                 setSearchItem(location?.state?.searchItem);
 
                 if (response.results?.length === 0) {
@@ -45,7 +45,7 @@ export const useSearch = (page) => {
         };
 
         getSearchData();
-    }, [query, page]);
+    }, [query]);
 
     return { results, searchItem, loading, error };
 };

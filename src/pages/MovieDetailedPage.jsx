@@ -20,7 +20,7 @@ const MovieDetailedPage = () => {
                 <div className='w-full min-h-screen bg-gray-950'>
                     <Poster movieData={movieData} />
                     <DetailBody movieData={movieData} movieCast={movieCast} />
-                    <SimilarData similarMovie={similarMovie} />
+                    {similarMovie.length !== 0 && <SimilarData similarMovie={similarMovie} />}
                     <Footer />
                 </div>
 
