@@ -27,4 +27,4 @@ MovieApp is a high-performance, responsive web application built with React.js t
 - **API** TMDB (The Movie Database)
 - **HTTP Client:** Axios
 
-**Live Link:** [https://your-vercel-link.vercel.app](https://your-vercel-link.vercel.app)
+**Live Link:** [https://your-vercel-link.vercel.app](https://movie-app-cmez.vercel.app/)
